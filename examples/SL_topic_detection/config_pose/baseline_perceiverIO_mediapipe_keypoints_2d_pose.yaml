@@ -1,0 +1,92 @@
+# @package _group_
+
+common:
+  fp16: false
+  log_interval: 2
+  wandb_project: SL_TD_pose
+
+task:
+  _name: SL_topic_detection
+  feats_type: ???
+  body_parts: LEFT_HAND_LANDMARKS,RIGHT_HAND_LANDMARKS
+  feat_dims: "0,1"
+  data: ???
+  dict_path: ???
+  normalization: layer_norm
+  min_source_positions: 150
+  max_source_positions: 250000
+  max_target_positions: 1
+  dataset: ''
+
+dataset:
+  num_workers: 0
+  batch_size: 32
+  skip_invalid_size_inputs_valid_test: true
+  train_subset: train
+  valid_subset: val
+  validate_interval_updates: 600
+
+#criterion:
+#  _name: label_smoothed_cross_entropy
+criterion:
+  _name: focal_loss
+  alpha: "0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1"
+  gamma: 0.0  # Default value, controls the focusing factor, higher values focus more on hard examples.
+
+optimization:
+  max_update: 3000 #####
+  lr: [0.0001]
+  update_freq: [1]
+
+optimizer:
+  _name: adam
+  adam_betas: [0.9, 0.998]
+  weight_decay: 0.01
+
+lr_scheduler:
+  _name: inverse_sqrt
+  warmup_updates: 500
+
+checkpoint:
+  keep_last_epochs: 1
+  best_checkpoint_metric: acc
+  maximize_best_checkpoint_metric: true
+  save_dir: ???
+
+model:
+  _name: SL_topic_detection_PerceiverIO
+  dropout: 0.2
+  d_model: ???
+  num_blocks: 1
+  num_self_attends_per_block: 1
+  num_self_attention_heads: 4
+  num_cross_attention_heads: 1
+  chunk_size_feed_forward: 256
+  num_latents: 256  # has to be a multiple of chunk_size_feed_forward
+  d_latents: 256
+  qk_channels: 256
+  v_channels: 256  # must have same value as d_latents, which is enforced in the script
+  #decoder_num_channels: 100  # must have same value as num_labels, which is enforced in the script
+  decoder_qk_channels: 256
+  decoder_v_channels: 256
+  cross_attention_shape_for_attention: kv
+  self_attention_widening_factor: 1
+  cross_attention_widening_factor: 1
+  hidden_act: relu
+  attention_probs_dropout_prob: 0.0
+  use_query_residual: false
+  num_bands: 5
+  preprocessor_position_encoding_type: trainable
+  decoder_position_encoding_type: trainable
+  image_prep_num_channels: 128
+  image_prep_type: patches
+  image_prep_spatial_downsample: 10
+  image_prep_temporal_downsample: 10
+  image_prep_in_channels: 3
+  image_prep_out_channels: 128
+  conv_after_patching: false
+  conv_after_patching_in_channels: 54
+
+bpe:
+  _name: sentencepiece
+  sentencepiece_model: ???

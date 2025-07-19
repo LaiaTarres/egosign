@@ -1,0 +1,74 @@
+# @package _group_
+name: "Sweep SL TD perceiverIO mediapipe_keypoints handsandbody"
+project: SLTopicDetection_sweep
+program: fairseq-hydra-train
+
+method: random #"grid", "random", "bayes"
+
+metric:
+  goal: maximize
+  name: val/acc
+
+parameters:
+  task.feats_type:
+    values: ['mediapipe_keypoints']
+    #  dataset.max_tokens:
+    # values: [40000]
+  dataset.batch_size:
+    values: [16, 32, 64]
+  task.normalization: #We should check which other ones are similar
+    values: ["layer_norm"]  
+  model.num_blocks:
+    values: [1, 2, 3, 4]  # Number of Perceiver blocks; more blocks increase model depth and capacity.
+  model.num_self_attends_per_block:
+    values: [1, 2]  # Number of self-attention layers per block; affects how much the model refines latents.
+  model.num_self_attention_heads:
+    values: [2, 4, 8]  # Number of heads in self-attention; more heads can improve multi-modal feature extraction.
+  model.num_cross_attention_heads:
+    values: [1, 2]  # Number of heads in cross-attention; more heads allow richer input-latent interactions.
+  model.chunk_size_feed_forward:
+    values: [128, 256, 512]  # Size of chunks for feedforward layers; impacts efficiency and parallelization.
+  model.num_latents:
+    values: [256, 512, 1024]  # Number of latent variables; must be a multiple of `chunk_size_feed_forward`.
+  model.use_query_residual:
+    values: [true, false]  # Whether to use query residual connections; affects gradient flow.
+  model.image_prep_num_channels:
+    values: [128, 256, 512]  # Number of output channels for image preprocessor; affects feature compression.
+  model.image_prep_type:
+    values: ["patches"]  # Method for image preprocessing; patches vs. convolutional feature extraction.
+  model.image_prep_spatial_downsample:
+    values: [5, 10, 20]  # Downsampling factor for spatial resolution; affects input size reduction.
+  model.image_prep_temporal_downsample:
+    values: [2, 5, 10]  # Downsampling factor for temporal resolution; reduces temporal redundancy.
+  model.dropout:
+    values: [0.0, 0.1, 0.2]
+  optimization.lr:
+    values: [[2e-3], [1e-3], [5e-4], [2e-4], [1e-4], [5e-5]]
+  optimizer.weight_decay: #This should help with the overfitting
+    values: [0.001,0.005,0.01]
+  criterion._name:
+    values: [focal_loss]
+  criterion.alpha:
+    values:
+      - "0.032935\\,0.033554\\,0.131136\\,0.103578\\,0.052167\\,0.072557\\,0.051789\\,0.111670\\,0.255246\\,0.155367"
+      - "0.1\\,0.1\\,0.1\\,0.1\\,0.1\\,0.1\\,0.1\\,0.1\\,0.1\\,0.1"
+  criterion.gamma: #When it is zero, this is weighted cross entropy. And with values to 1, it is regular cross entropy.
+    values: [0.0, 1.0, 2.0, 3.0]
+
+# TODO: checkpoint.save_dir should have a name associated to each of the runs. But we did not find a way to do this. 
+# REMEMBER: change the config name if you need
+command:
+  - ${program}
+  - ${args_no_hyphens}
+  - "task.data=/home/ltarres/temp_data/How2Sign/TopicDetection/mediapipe_keypoints"
+  - "task.dict_path=/home/ltarres/temp_data/How2Sign/TopicDetection/mediapipe_keypoints/categoryName_categoryID.csv"
+  - "task.feats_type=mediapipe_keypoints"
+  - "task.dataset='How2Sign'"
+  - "checkpoint.save_dir=/home/ltarres/temp_data/How2Sign/TopicDetection/laia_final_models/perceiverIO_mediapipe_keypoints_2d_pose_sweep"
+  - "checkpoint.no_last_checkpoints=True"
+  - "checkpoint.restore_file=checkpoint_none.pt"
+  - "bpe.sentencepiece_model=/home/ltarres/temp_data/How2Sign/TopicDetection/text/spm_unigram8000_en.model"
+  - "--config-dir"
+  - "./config_pose"
+  - "--config-name"
+  - "baseline_perceiverIO_mediapipe_keypoints_2d_pose_handsandbody"
