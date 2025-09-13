@@ -1,6 +1,36 @@
 # EgoSign: A Multiview Video Dataset for Sign Language Understanding
 This repository contains the implementation for the EgoSign: A Multiview Video Dataset for Sign Language Understanding paper. 
 
+<p align="center">
+    <a href="./visualizations_teaser/Teaser.jpg">
+        <img src="./visualizations_teaser/Teaser.jpg" alt="Teaser Preview" width="600"/>
+    </a>
+</p>
+
+<table align="center" style="border: none;">
+<tr>
+<td align="center" style="border: none;"><b>Video ID: 00dWJ4YRRSI-12_2</b></td>
+<td align="center" style="border: none;"><b>Video ID: 46Cwjrd4ua4-14_2</b></td>
+</tr>
+<tr>
+<td width="50%" style="border: none;">
+<video controls autoplay loop muted width="100%" src="./visualizations_teaser/00dWJ4YRRSI-12_2.mp4"></video>
+</td>
+<td width="50%" style="border: none;">
+<video controls autoplay loop muted width="100%" src="./visualizations_teaser/46Cwjrd4ua4-14_2.mp4"></video>
+</td>
+</tr>
+<tr>
+<td align="center" colspan="2" style="border: none;"><b>Video ID: FZCF7kPIyOk-8_2</b></td>
+</tr>
+<tr>
+<td align="center" colspan="2" style="border: none;">
+<video controls autoplay loop muted width="50%" src="./visualizations_teaser/FZCF7kPIyOk-8_2.mp4"></video>
+</td>
+</tr>
+</table>
+
+
 All the scripts are located inside examples/SL_topic_detection/scripts.
 
 ## First steps
@@ -29,20 +59,6 @@ Once the dataset has been downloaded, it should follow this structure:
 │           ├── egosign_oc_val_resectioning_smooth_normalized.tsv
 │           ├── egosign_test_proves_filtered_smooth_normalized_combined_resectioning.tsv
 │           ├── egosign_val_proves_filtered_smooth_normalized_combined_resectioning.tsv
-│           ├── how2sign_train_calcula_smooth.tsv
-│           ├── how2sign_test_calcula_smooth.tsv
-│           └── how2sign_val_calcula_smooth.tsv
-│           ├── how2sign/
-│           │   ├── train/
-│           │   │   ├── --7E2sU6zP4-5.pose
-│           │   │   └── ...
-│           │   ├── val/
-│           │   │   ├── -d5dN54tH2E-1.pose
-│           │   │   └── ...
-│           │   └── test/
-│           │       ├── -fZc293MpJk-1-rgb_front.pose
-│           │       └── ...
-│           │
 │           ├── egosign_front/
 │           │   ├── val/
 │           │   └── test/
