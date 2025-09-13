@@ -2,10 +2,12 @@
 This repository contains the implementation for the EgoSign: A Multiview Video Dataset for Sign Language Understanding paper. 
 
 <p align="center">
-    <a href="./visualizations_teaser/Teaser.jpg">
-        <img src="./visualizations_teaser/Teaser.jpg" alt="Teaser Preview" width="600"/>
+    <a href="./examples/SL_topic_detection/visualizations_teaser/Teaser.jpg">
+        <img src="./examples/SL_topic_detection/visualizations_teaser/Teaser.jpg" alt="Teaser Preview" width="600"/>
     </a>
 </p>
+
+If it doesn't charge properly, you can find the videos inside the examples/SL_topic_detection/visualizations_teaser folder.
 
 <table align="center" style="border: none;">
 <tr>
