@@ -2,8 +2,8 @@
 This repository contains the implementation for the EgoSign: A Multiview Video Dataset for Sign Language Understanding paper. 
 
 <p align="center">
-    <a href="./examples/SL_topic_detection/visualizations_teaser/Teaser.jpg">
-        <img src="./examples/SL_topic_detection/visualizations_teaser/Teaser.jpg" alt="Teaser Preview" width="600"/>
+    <a href="https://github.com/LaiaTarres/egosign/tree/main/examples/SL_topic_detection/visualizations_teaser/Teaser.jpg">
+        <img src="https://github.com/LaiaTarres/egosign/tree/main/examples/SL_topic_detection/visualizations_teaser/Teaser.jpg" alt="Teaser Preview" width="600"/>
     </a>
 </p>
 
@@ -16,10 +16,10 @@ If it doesn't charge properly, you can find the videos inside the examples/SL_to
 </tr>
 <tr>
 <td width="50%" style="border: none;">
-<video controls autoplay loop muted width="100%" src="./visualizations_teaser/00dWJ4YRRSI-12_2.mp4"></video>
+<video controls autoplay loop muted width="100%" src="https://github.com/LaiaTarres/egosign/tree/main/examples/SL_topic_detection/visualizations_teaser/00dWJ4YRRSI-12_2.mp4"></video>
 </td>
 <td width="50%" style="border: none;">
-<video controls autoplay loop muted width="100%" src="./visualizations_teaser/46Cwjrd4ua4-14_2.mp4"></video>
+<video controls autoplay loop muted width="100%" src="https://github.com/LaiaTarres/egosign/tree/main/examples/SL_topic_detection/visualizations_teaser/46Cwjrd4ua4-14_2.mp4"></video>
 </td>
 </tr>
 <tr>
@@ -27,7 +27,7 @@ If it doesn't charge properly, you can find the videos inside the examples/SL_to
 </tr>
 <tr>
 <td align="center" colspan="2" style="border: none;">
-<video controls autoplay loop muted width="50%" src="./visualizations_teaser/FZCF7kPIyOk-8_2.mp4"></video>
+<video controls autoplay loop muted width="50%" src="https://github.com/LaiaTarres/egosign/tree/main/examples/SL_topic_detection/visualizations_teaser/FZCF7kPIyOk-8_2.mp4"></video>
 </td>
 </tr>
 </table>
