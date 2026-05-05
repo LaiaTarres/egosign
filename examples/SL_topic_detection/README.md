@@ -7,30 +7,55 @@ This repository contains the implementation for the EgoSign: A Multiview Video D
     </a>
 </p>
 
-If it doesn't charge properly, you can find the videos inside the examples/SL_topic_detection/visualizations_teaser folder.
+If the videos don't charge properly, you can find them inside the examples/SL_topic_detection/visualizations_teaser folder.
 
 <table align="center" style="border: none;">
-<tr>
-<td align="center" style="border: none;"><b>Video ID: 00dWJ4YRRSI-12_2</b></td>
-<td align="center" style="border: none;"><b>Video ID: 46Cwjrd4ua4-14_2</b></td>
-</tr>
-<tr>
-<td width="50%" style="border: none;">
-<video controls autoplay loop muted width="100%" src="https://github.com/LaiaTarres/egosign/tree/main/examples/SL_topic_detection/visualizations_teaser/00dWJ4YRRSI-12_2.mp4"></video>
-</td>
-<td width="50%" style="border: none;">
-<video controls autoplay loop muted width="100%" src="https://github.com/LaiaTarres/egosign/tree/main/examples/SL_topic_detection/visualizations_teaser/46Cwjrd4ua4-14_2.mp4"></video>
-</td>
-</tr>
-<tr>
-<td align="center" colspan="2" style="border: none;"><b>Video ID: FZCF7kPIyOk-8_2</b></td>
-</tr>
-<tr>
-<td align="center" colspan="2" style="border: none;">
-<video controls autoplay loop muted width="50%" src="https://github.com/LaiaTarres/egosign/tree/main/examples/SL_topic_detection/visualizations_teaser/FZCF7kPIyOk-8_2.mp4"></video>
-</td>
-</tr>
+  <!-- Main Column Headers -->
+  <tr>
+    <td align="center" style="border: none; font-size: 18px;"><b>Mediapipe</b></td>
+    <td align="center" style="border: none; font-size: 18px;"><b>Dynhamr</b></td>
+  </tr>
+
+  <!-- VIDEO 1 -->
+  <tr>
+    <td align="center" colspan="2" style="border: none; padding-top: 15px;"><b>Video ID: 00dWJ4YRRSI-12</b></td>
+  </tr>
+  <tr>
+    <td width="50%" style="border: none;">
+      <video controls autoplay loop muted width="100%" src="https://raw.githubusercontent.com/LaiaTarres/egosign/main/examples/SL_topic_detection/visualizations_teaser/00dWJ4YRRSI-12_2.mp4"></video>
+    </td>
+    <td width="50%" style="border: none;">
+      <video controls autoplay loop muted width="100%" src="https://raw.githubusercontent.com/LaiaTarres/egosign/main/examples/SL_topic_detection/visualizations_teaser/dynhamr/00dWJ4YRRSI-12.mp4"></video>
+    </td>
+  </tr>
+
+  <!-- VIDEO 2 -->
+  <tr>
+    <td align="center" colspan="2" style="border: none; padding-top: 15px;"><b>Video ID: 46Cwjrd4ua4-14</b></td>
+  </tr>
+  <tr>
+    <td width="50%" style="border: none;">
+      <video controls autoplay loop muted width="100%" src="https://raw.githubusercontent.com/LaiaTarres/egosign/main/examples/SL_topic_detection/visualizations_teaser/46Cwjrd4ua4-14_2.mp4"></video>
+    </td>
+    <td width="50%" style="border: none;">
+      <video controls autoplay loop muted width="100%" src="https://raw.githubusercontent.com/LaiaTarres/egosign/main/examples/SL_topic_detection/visualizations_teaser/dynhamr/46Cwjrd4ua4-14.mp4"></video>
+    </td>
+  </tr>
+
+  <!-- VIDEO 3 -->
+  <tr>
+    <td align="center" colspan="2" style="border: none; padding-top: 15px;"><b>Video ID: FZCF7kPIyOk-8</b></td>
+  </tr>
+  <tr>
+    <td width="50%" style="border: none;">
+      <video controls autoplay loop muted width="100%" src="https://raw.githubusercontent.com/LaiaTarres/egosign/main/examples/SL_topic_detection/visualizations_teaser/FZCF7kPIyOk-8_2.mp4"></video>
+    </td>
+    <td width="50%" style="border: none;">
+      <video controls autoplay loop muted width="100%" src="https://raw.githubusercontent.com/LaiaTarres/egosign/main/examples/SL_topic_detection/visualizations_teaser/dynhamr/FZCF7kPIyOk-8.mp4"></video>
+    </td>
+  </tr>
 </table>
+
 
 
 All the main launchers are in examples/SL_topic_detection/. Helper utilities live in examples/SL_topic_detection/scripts/.
