@@ -22,10 +22,10 @@ If the videos don't charge properly, you can find them inside the examples/SL_to
   </tr>
   <tr>
     <td width="50%" style="border: none;">
-      <video controls autoplay loop muted width="100%" src="https://raw.githubusercontent.com/LaiaTarres/egosign/main/examples/SL_topic_detection/visualizations_teaser/00dWJ4YRRSI-12_2.mp4"></video>
+      <video controls autoplay loop muted width="100%" src="https://github.com/LaiaTarres/egosign/raw/main/examples/SL_topic_detection/visualizations_teaser/00dWJ4YRRSI-12_2.mp4"></video>
     </td>
     <td width="50%" style="border: none;">
-      <video controls autoplay loop muted width="100%" src="https://raw.githubusercontent.com/LaiaTarres/egosign/main/examples/SL_topic_detection/visualizations_teaser/dynhamr/00dWJ4YRRSI-12.mp4"></video>
+      <video controls autoplay loop muted width="100%" src="https://github.com/LaiaTarres/egosign/raw/main/examples/SL_topic_detection/visualizations_teaser/dynhamr/00dWJ4YRRSI-12.mp4"></video>
     </td>
   </tr>
 
@@ -35,10 +35,10 @@ If the videos don't charge properly, you can find them inside the examples/SL_to
   </tr>
   <tr>
     <td width="50%" style="border: none;">
-      <video controls autoplay loop muted width="100%" src="https://raw.githubusercontent.com/LaiaTarres/egosign/main/examples/SL_topic_detection/visualizations_teaser/46Cwjrd4ua4-14_2.mp4"></video>
+      <video controls autoplay loop muted width="100%" src="https://github.com/LaiaTarres/egosign/raw/main/examples/SL_topic_detection/visualizations_teaser/46Cwjrd4ua4-14_2.mp4"></video>
     </td>
     <td width="50%" style="border: none;">
-      <video controls autoplay loop muted width="100%" src="https://raw.githubusercontent.com/LaiaTarres/egosign/main/examples/SL_topic_detection/visualizations_teaser/dynhamr/46Cwjrd4ua4-14.mp4"></video>
+      <video controls autoplay loop muted width="100%" src="https://github.com/LaiaTarres/egosign/raw/main/examples/SL_topic_detection/visualizations_teaser/dynhamr/46Cwjrd4ua4-14.mp4"></video>
     </td>
   </tr>
 
@@ -48,10 +48,10 @@ If the videos don't charge properly, you can find them inside the examples/SL_to
   </tr>
   <tr>
     <td width="50%" style="border: none;">
-      <video controls autoplay loop muted width="100%" src="https://raw.githubusercontent.com/LaiaTarres/egosign/main/examples/SL_topic_detection/visualizations_teaser/FZCF7kPIyOk-8_2.mp4"></video>
+      <video controls autoplay loop muted width="100%" src="https://github.com/LaiaTarres/egosign/raw/main/examples/SL_topic_detection/visualizations_teaser/FZCF7kPIyOk-8_2.mp4"></video>
     </td>
     <td width="50%" style="border: none;">
-      <video controls autoplay loop muted width="100%" src="https://raw.githubusercontent.com/LaiaTarres/egosign/main/examples/SL_topic_detection/visualizations_teaser/dynhamr/FZCF7kPIyOk-8.mp4"></video>
+      <video controls autoplay loop muted width="100%" src="https://github.com/LaiaTarres/egosign/raw/main/examples/SL_topic_detection/visualizations_teaser/dynhamr/FZCF7kPIyOk-8.mp4"></video>
     </td>
   </tr>
 </table>
