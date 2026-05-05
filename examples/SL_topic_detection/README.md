@@ -2,8 +2,8 @@
 This repository contains the implementation for the EgoSign: A Multiview Video Dataset for Sign Language Understanding paper. 
 
 <p align="center">
-    <a href="https://github.com/LaiaTarres/egosign/tree/main/examples/SL_topic_detection/visualizations_teaser/Teaser.jpg">
-        <img src="https://github.com/LaiaTarres/egosign/tree/main/examples/SL_topic_detection/visualizations_teaser/Teaser_egosign.png" alt="Teaser Preview" width="600"/>
+    <a href="https://github.com/LaiaTarres/egosign/tree/main/examples/SL_topic_detection/visualizations_teaser/Teaser_egosign.jpg">
+        <img src="https://github.com/LaiaTarres/egosign/tree/main/examples/SL_topic_detection/visualizations_teaser/Teaser_egosign.jpg" alt="Teaser Preview" width="600"/>
     </a>
 </p>
 
