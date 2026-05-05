@@ -22,10 +22,10 @@ If the videos don't charge properly, you can find them inside the examples/SL_to
   </tr>
   <tr>
     <td width="50%" style="border: none;">
-      <video controls autoplay loop muted width="100%" src="https://github.com/LaiaTarres/egosign/raw/main/examples/SL_topic_detection/visualizations_teaser/00dWJ4YRRSI-12_2.mp4"></video>
+      <video controls autoplay loop muted width="100%" src="https://github.com/user-attachments/assets/ced73ac3-8013-4e16-ae03-1c920da3419d"></video>
     </td>
     <td width="50%" style="border: none;">
-      <video controls autoplay loop muted width="100%" src="https://github.com/LaiaTarres/egosign/raw/main/examples/SL_topic_detection/visualizations_teaser/dynhamr/00dWJ4YRRSI-12.mp4"></video>
+      <video controls autoplay loop muted width="100%" src="https://github.com/user-attachments/assets/8a979aa0-164e-469c-8f10-b6a0c755c642"></video>
     </td>
   </tr>
 
@@ -35,10 +35,10 @@ If the videos don't charge properly, you can find them inside the examples/SL_to
   </tr>
   <tr>
     <td width="50%" style="border: none;">
-      <video controls autoplay loop muted width="100%" src="https://github.com/LaiaTarres/egosign/raw/main/examples/SL_topic_detection/visualizations_teaser/46Cwjrd4ua4-14_2.mp4"></video>
+      <video controls autoplay loop muted width="100%" src="https://github.com/user-attachments/assets/7fc9d3c6-e1f6-4312-add0-1ce98df6671f"></video>
     </td>
     <td width="50%" style="border: none;">
-      <video controls autoplay loop muted width="100%" src="https://github.com/LaiaTarres/egosign/raw/main/examples/SL_topic_detection/visualizations_teaser/dynhamr/46Cwjrd4ua4-14.mp4"></video>
+      <video controls autoplay loop muted width="100%" src="https://github.com/user-attachments/assets/3e3b47eb-1dcf-4297-83e1-07b7f81c763e"></video>
     </td>
   </tr>
 
@@ -48,10 +48,10 @@ If the videos don't charge properly, you can find them inside the examples/SL_to
   </tr>
   <tr>
     <td width="50%" style="border: none;">
-      <video controls autoplay loop muted width="100%" src="https://github.com/LaiaTarres/egosign/raw/main/examples/SL_topic_detection/visualizations_teaser/FZCF7kPIyOk-8_2.mp4"></video>
+      <video controls autoplay loop muted width="100%" src="https://github.com/user-attachments/assets/403bc790-334a-41ff-a5b3-dd93cdc862f8"></video>
     </td>
     <td width="50%" style="border: none;">
-      <video controls autoplay loop muted width="100%" src="https://github.com/LaiaTarres/egosign/raw/main/examples/SL_topic_detection/visualizations_teaser/dynhamr/FZCF7kPIyOk-8.mp4"></video>
+      <video controls autoplay loop muted width="100%" src="https://github.com/user-attachments/assets/a333e181-db46-4393-94cf-aecee5313320"></video>
     </td>
   </tr>
 </table>
