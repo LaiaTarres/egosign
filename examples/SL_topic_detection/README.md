@@ -25,7 +25,7 @@ If the videos don't charge properly, you can find them inside the examples/SL_to
       <video controls autoplay loop muted width="100%" src="https://github.com/user-attachments/assets/ced73ac3-8013-4e16-ae03-1c920da3419d"></video>
     </td>
     <td width="50%" style="border: none;">
-      <video controls autoplay loop muted width="100%" src="https://github.com/user-attachments/assets/8a979aa0-164e-469c-8f10-b6a0c755c642"></video>
+      <video controls autoplay loop muted width="100%" src="https://github.com/user-attachments/assets/a333e181-db46-4393-94cf-aecee5313320"></video>
     </td>
   </tr>
 
@@ -51,7 +51,7 @@ If the videos don't charge properly, you can find them inside the examples/SL_to
       <video controls autoplay loop muted width="100%" src="https://github.com/user-attachments/assets/403bc790-334a-41ff-a5b3-dd93cdc862f8"></video>
     </td>
     <td width="50%" style="border: none;">
-      <video controls autoplay loop muted width="100%" src="https://github.com/user-attachments/assets/a333e181-db46-4393-94cf-aecee5313320"></video>
+      <video controls autoplay loop muted width="100%" src="https://github.com/user-attachments/assets/8a979aa0-164e-469c-8f10-b6a0c755c642"></video>
     </td>
   </tr>
 </table>
