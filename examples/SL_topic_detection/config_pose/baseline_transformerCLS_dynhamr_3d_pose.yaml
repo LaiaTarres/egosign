@@ -1,0 +1,92 @@
+# @package _group_
+
+common:
+  fp16: false
+  log_interval: 2
+  wandb_project: SLTopicDetection
+
+task:
+  _name: SL_topic_detection
+  feats_type: dynhamr
+  body_parts: LEFT_HAND_LANDMARKS,RIGHT_HAND_LANDMARKS
+  feat_dims: "0,1,2"
+  data: ???
+  dict_path: ???
+  normalization: layer_norm
+  to_camera_coordinates: true
+  dynhamr_temporal_interpolation: true
+  dynhamr_source_fps: 25.0
+  dynhamr_target_fps: 30.0
+  dynhamr_fill_mode: neighbor_average
+  dynhamr_long_gap_linear_threshold: 8
+  dynhamr_2d_mp_pose_manifest_file: null
+  data_augmentation: true
+  aug3d_random_resample: true
+  aug3d_resample_p: 0.3
+  aug3d_resample_limit: 0.1
+  aug3d_frame_noise: true
+  aug3d_frame_noise_ratio: 0.05
+  aug3d_frame_noise_std: 0.005
+  aug3d_feature_mask: true
+  aug3d_feature_mask_ratio: 0.05
+  aug3d_frame_mask: true
+  aug3d_frame_mask_ratio: 0.03
+  aug3d_scale: true
+  aug3d_scale_limit: 0.05
+  aug3d_shift: true
+  aug3d_shift_std: 0.01
+  aug3d_horizontal_flip: true
+  aug3d_horizontal_flip_p: 0.3
+  min_source_positions: 150
+  max_source_positions: 250000
+  max_target_positions: 1
+  dataset: ''
+
+dataset:
+  num_workers: 0
+  batch_size: 16
+  skip_invalid_size_inputs_valid_test: true
+  train_subset: train
+  valid_subset: val
+  validate_interval_updates: 600
+
+criterion:
+  _name: focal_loss
+  alpha: "0.032935,0.033554,0.131136,0.103578,0.052167,0.072557,0.051789,0.111670,0.255246,0.155367"
+  gamma: 0.0
+
+optimization:
+  max_update: 7000
+  lr: [5e-05]
+  update_freq: [1]
+
+optimizer:
+  _name: adam
+  adam_betas: [0.9, 0.998]
+  weight_decay: 0.005
+
+lr_scheduler:
+  _name: inverse_sqrt
+  warmup_updates: 500
+
+checkpoint:
+  keep_last_epochs: 1
+  save_interval_updates: 1000
+  keep_interval_updates: 5
+  keep_best_checkpoints: 3
+  best_checkpoint_metric: acc
+  maximize_best_checkpoint_metric: true
+  save_dir: ???
+
+model:
+  _name: SL_topic_detection_transformer_CLS
+  subsample_input: true
+  dropout: 0.2
+  encoder_embed_dim: 128
+  encoder_ffn_embed_dim: 1024
+  encoder_attention_heads: 8
+  encoder_layers: 5
+
+bpe:
+  _name: sentencepiece
+  sentencepiece_model: ???

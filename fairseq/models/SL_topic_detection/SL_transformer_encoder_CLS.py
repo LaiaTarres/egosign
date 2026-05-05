@@ -246,7 +246,7 @@ class Sign2TextTransformerModel_CLS(BaseFairseqModel):
             )
         encoder = cls.build_encoder(cfg, encoder_embed_tokens)
 
-        print(cfg.keys(), flush=True)
+        # print(cfg.keys(), flush=True)
 
         classif_head = cls.build_classif_head(cfg)
 
@@ -274,6 +274,12 @@ class Sign2TextTransformerModel_CLS(BaseFairseqModel):
             src_lengths=src_lengths
         )
         x = self.classif_head(x['encoder_out'][0][0,:,:])  # retrieve output token corresponding to CLS
+        #for name, param in self.encoder.named_parameters():
+        #    if 'CLS' in name:
+        #        #print(f"[Gradients] {name}: grad_norm={(param.grad.norm() if param.grad is not None else 0):.6f}")
+        #for name, param in self.classif_head.named_parameters():
+        #    if 'CLS' in name:
+        #        #print(f"[Gradients] {name}: grad_norm={(param.grad.norm() if param.grad is not None else 0):.6f}")        
         return x
 
 
@@ -348,7 +354,11 @@ class SLTopicDetectionTransformerEncoder_CLS(FairseqEncoder):
             self.layer_norm = None
 
     def _forward(self, src_tokens, src_lengths, return_all_hiddens=False):
-        if self.feats_type == SignFeatsType_TD.mediapipe_keypoints: #We need to reshape this, to be B x T, for example go from [32, 1790, 42, 2] to [32, 1790, 84]
+        if (
+            self.feats_type == SignFeatsType_TD.mediapipe_keypoints
+            or self.feats_type == SignFeatsType_TD.dynhamr
+            or self.feats_type == SignFeatsType_TD.dynhamr_2d
+        ): #We need to reshape this, to be B x T, for example go from [32, 1790, 42, 2] to [32, 1790, 84]
             src_tokens = src_tokens.view(src_tokens.shape[0], src_tokens.shape[1], -1)
         
         x = src_tokens  # B x T x C
@@ -363,6 +373,7 @@ class SLTopicDetectionTransformerEncoder_CLS(FairseqEncoder):
 
         # add CLS token at the beginning of the sequence
         cls_token = self.CLS_embed
+        #print(f"[CLS] Shape: {cls_token.shape}, Mean: {cls_token.mean():.6f}, Std: {cls_token.std():.6f}")
         cls_token = cls_token.repeat(1, x.shape[1], 1)
         x = torch.cat((cls_token, x), dim=0)
         input_lengths = input_lengths + 1
